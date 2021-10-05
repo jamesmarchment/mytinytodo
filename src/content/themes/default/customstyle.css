@@ -1,4 +1,4 @@
-/* UNDOING THINGS (sorry Max) */
+/* UNDOING THINGS */
 
 #tasklist li.task-row.task-has-note.clicked .task-block {border-bottom: 0;}
 #tasklist li.task-row:hover {box-shadow: 0;}
@@ -26,6 +26,18 @@ text-align: center;
 white-space: nowrap;
 }
 
+form#taskedit_form{
+	font-family: 'Oxygen', sans-serif;
+}
+
+form#taskedit_form select, form#taskedit_form input {
+	font-family: 'Open Sans', sans-serif;
+}
+
+div#ui-datepicker-div, .ui-datepicker-calendar thead th, .ui-datepicker-calendar tbody td {
+	font-family: 'Open Sans', sans-serif;
+}
+
 span.task-title {
 	font-size: 1.25em;
 }
@@ -38,37 +50,64 @@ span.task-title {
 	font-family: 'Oxygen', sans-serif;
 }
 
-.form-bottom-buttons input {
+#page_taskedit .form-bottom-buttons input {
 	font-family: 'Open Sans', sans-serif;
-    border: 8px solid #fff;
+    border: 1px solid #fff;
     font-weight: 800;
 	font-size: 1.2em;
-    border-radius: 30px;
     padding: 12px;
-    color: #fff;
-    background: rgba(0,0,0,0);
+    color: #8a8a8a;
+    background: #dfdfdf;
     min-width: 100px;
     text-transform: uppercase;
-	margin: 0 10px;
-	transition: all 0.4s;
+	transition: all 0.25s;
 	cursor: pointer;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.75);
-	-webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.25);
+box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.25);
 }
 
 
-.form-bottom-buttons input:hover {
-    background: rgba(10,10,62,1);
+#page_taskedit .form-bottom-buttons input:hover {
+    background: #efefef;
+}
+
+#page_taskedit .form-bottom-buttons input:focus {
+    outline: none;
+    border-color: #aaa;
+box-shadow: 0 0 8px 2px rgba(25,25,25,0.2);
 }
 
 .task-note-area textarea {
 	height: 100px;
+    color: #888888;
 }
 
 h2 {
 	background: none;
+}
+
+.duedate {
+	font-family: 'Open Sans', sans-serif;
+	color: #555;
+}
+
+.duedate::before {
+	position: relative;
+	top: -1px;
+}
+
+.task-date-completed {
+	font-family: 'Open Sans', sans-serif;
+	}
+
+.task-note-block {
+    margin-left: 55px;
+    color: #777777;
+    background: url(images/page_white_text.png) left 2px no-repeat;
+    padding-left: 40px;
+    min-height: 25px;
 }
 
 /* TABLE */
@@ -127,6 +166,21 @@ div.task-left input {
 	font-weight: 600;
 	font-size: 0.75em;
 	letter-spacing: 0.1em;
+}
+
+/* TAGS */
+
+.task-tags {
+	margin-left: 10px;
+}
+
+.task-tags a.tag {
+	color: #a0a0a0;
+	transition: all 0.25s linear 0s;
+}
+a.tag:hover {
+	color: #505050;
+	transition: all 0.5s ease-in-out 0.55s;
 }
 
 /* TABS */ 
@@ -216,9 +270,10 @@ input#task {
 }
 
 img.ui-datepicker-trigger {
-	width: 24px;
+	width: 28px;
+	height: 25px;
 	position: relative;
-    top: 3px;
+    top: 4px;
     left: 6px;
 	margin-top: -10px;
 	opacity: 0.75;
@@ -359,8 +414,9 @@ div#loading {
 	height: 20px;
 	width: 20px;
   display: inline-block;
-      position: relative;
-    top: -10px;
+      position: absolute;
+    top: 163px;
+	left: 460px;
 }
 
 div#loading:after {
@@ -389,9 +445,12 @@ div#loading:after {
 
 
 #footer {
-	opacity: 0.25;
+	opacity: 0.4;
 	transition: all .5s;
 }
+
+#footer_content {
+	background-color: #afafaf;}
 
 #footer:hover {
 	opacity: 0.95;
@@ -399,7 +458,8 @@ div#loading:after {
 
 
 body {
-	background: url('./images/noise.png');
+	color: #555;
+   	background: #ddd url('./images/noise.png');
 	
 }
 
