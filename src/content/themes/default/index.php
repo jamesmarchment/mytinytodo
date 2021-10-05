@@ -15,6 +15,10 @@
 	<?php if(Config::get('rtl')): ?>
 	<link rel="stylesheet" type="text/css" href="<?php mttinfo('template_url'); ?>style_rtl.css?v=<?php mttinfo('version'); ?>" media="all" />
 	<?php endif; ?>
+	<link rel="stylesheet" type="text/css" href="<?php mttinfo('template_url'); ?>customstyle.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="<?php mttinfo('template_url'); ?>screen.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="<?php mttinfo('template_url'); ?>font/stylesheet.css" media="all" />
+	<link href="https://fonts.googleapis.com/css?family=Oxygen|Open+Sans:400,600" rel="stylesheet">
 </head>
 
 <body <?php if (Lang::instance()->rtl()) echo 'dir="rtl"'; ?>>
